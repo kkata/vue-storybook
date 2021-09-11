@@ -3,6 +3,17 @@ import Button from "./Button";
 export default {
   title: "Button",
   component: Button,
+  argTypes: {
+    size: {
+      control: {
+        type: "inline-radio",
+        options: ["small", "medium", "large"],
+      },
+    },
+    backgroundColor: {
+      control: "color",
+    },
+  },
 };
 
 const Template = (args, { argTypes }) => ({
@@ -24,3 +35,5 @@ Secondary.args = {
   secondary: true,
   label: "セカンダリーボタン",
 };
+
+// console.log(JSON.stringify(Button.__docgenInfo, null, 2));
