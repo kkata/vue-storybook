@@ -23,6 +23,7 @@ const Template = (args, { argTypes }) => ({
 });
 
 export const Primary = Template.bind({});
+Primary.storyName = "プライマリーボタン";
 Primary.args = {
   primary: true,
   secondary: false,
