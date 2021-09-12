@@ -11,6 +11,7 @@ export default {
       viewports: INITIAL_VIEWPORTS,
       defaultViewport: "iphone6",
     },
+    layout: "fullscreen",
   },
 };
 
