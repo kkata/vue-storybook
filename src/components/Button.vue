@@ -11,18 +11,31 @@
 <script>
 export default {
   props: {
+    /**
+     * ボタン内に表示するテキスト
+     */
     label: {
       type: String,
       required: true,
     },
+    /**
+     * プライマリーカラーを適用するか
+     */
     primary: {
       type: Boolean,
       default: false,
     },
+    /**
+     * セカンダリーカラーを適用するか
+     */
     secondary: {
       type: Boolean,
       default: false,
     },
+    /**
+     * ボタンのサイズ
+     * @values small, medium, large
+     */
     size: {
       type: String,
       default: "medium",
@@ -40,6 +53,16 @@ export default {
       return {
         backgroundColor: this.backgroundColor,
       };
+    },
+  },
+  methods: {
+    onClick() {
+      /**
+       * ボタンクリック時のイベント
+       * @event onClick
+       * @type {object}
+       */
+      this.$emit("onClick");
     },
   },
 };
